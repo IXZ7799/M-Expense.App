@@ -2,40 +2,39 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="M_Expense.MainPage">
-
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <SearchBar Grid.Row="0" x:Name="searchTrip" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="5" SearchButtonPressed="searchTrip_SearchButtonPressed"></SearchBar>
+        <CollectionView x:Name="collectionView" SelectionMode="Single" SelectionChanged="collectionView_SelectionChanged" Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.RowSpan="2" Source="{Binding ImageName}" WidthRequest="60" HeightRequest="60" Margin="0, 0, 5, 0"></Image>
+                        <Label Grid.Column="1" Text="{Binding TripName}" FontAttributes="Bold" TextColor="DarkCyan"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Destination}" VerticalOptions="End"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding TripDate}" VerticalOptions="End"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding RiskAssessment}" VerticalOptions="End"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Description}" VerticalOptions="End"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding PeopleAttending}" VerticalOptions="End"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Transportation}" VerticalOptions="End"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <VerticalStackLayout Grid.Row="1" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,10,10">
+            <ImageButton x:Name="btnAdd" Source="button_add.svg" Aspect="AspectFit" WidthRequest="50" HeightRequest="50" Margin="0,0,10,10" Clicked="btnAdd_Clicked"/>
+            <ImageButton x:Name="btnDeleteAll" Source="button_remove.svg" Aspect="AspectFit" WidthRequest="50" HeightRequest="50" Margin="0,0,10,10" Clicked="btnDeleteAll_Clicked"/>
         </VerticalStackLayout>
-    </ScrollView>
-
+    </Grid>
 </ContentPage>
