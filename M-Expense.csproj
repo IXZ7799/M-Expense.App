@@ -50,10 +50,19 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\button_add.svg" />
 	  <None Remove="Resources\Images\button_delete.svg" />
+	  <None Remove="Resources\Images\default_image.svg" />
+	  <None Remove="Resources\Images\earth_africa.svg" />
+	  <None Remove="Resources\Images\earth_americas.svg" />
+	  <None Remove="Resources\Images\earth_asia.svg" />
+	  <None Remove="Resources\Images\earth_europe.svg" />
+	  <None Remove="Resources\Images\earth_oceania.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.4" />
+		<PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.4" />
 	</ItemGroup>
 
 </Project>
