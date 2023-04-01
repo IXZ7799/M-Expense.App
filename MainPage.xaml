@@ -27,13 +27,62 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Image Grid.RowSpan="7" Source="{Binding ImageName}" WidthRequest="60" HeightRequest="60" Margin="0, 0, 5, 0"></Image>
-                        <Label Grid.Column="1" Text="{Binding TripName}" FontAttributes="Bold" TextColor="DarkCyan"/>
-                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Destination}" VerticalOptions="End"/>
-                        <Label Grid.Row="3" Grid.Column="1" Text="{Binding TripDate}" VerticalOptions="End"/>
-                        <Label Grid.Row="4" Grid.Column="1" Text="{Binding RiskAssessment}" VerticalOptions="End"/>
-                        <Label Grid.Row="5" Grid.Column="1" Text="{Binding TripDesc}" VerticalOptions="End"/>
-                        <Label Grid.Row="6" Grid.Column="1" Text="{Binding PeopleAttending}" VerticalOptions="End"/>
-                        <Label Grid.Row="7" Grid.Column="1" Text="{Binding Transportation}" VerticalOptions="End"/>
+                        <Label Grid.Column="1" FontAttributes="Bold" TextColor="DarkCyan">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Trip name: "/>
+                                    <Span Text="{Binding TripName}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Grid.Column="1" Grid.Row="2" TextColor="DarkBlue">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Destination: "/>
+                                    <Span Text="{Binding Destination}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Grid.Column="1" Grid.Row="3" TextColor="DarkBlue">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Trip date: "/>
+                                    <Span Text="{Binding TripDate}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Grid.Column="1" Grid.Row="4" TextColor="DarkBlue">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Risk assessment: "/>
+                                    <Span Text="{Binding RiskAssessment}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Grid.Column="1" Grid.Row="5" TextColor="DarkBlue">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Description: "/>
+                                    <Span Text="{Binding TripDesc}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Grid.Column="1" Grid.Row="6" TextColor="DarkBlue">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="No. of people: "/>
+                                    <Span Text="{Binding PeopleAttending}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label Grid.Column="1" Grid.Row="7" TextColor="DarkBlue">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Destination: "/>
+                                    <Span Text="{Binding Transportation}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
