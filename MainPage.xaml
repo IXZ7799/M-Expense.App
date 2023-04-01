@@ -15,19 +15,25 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <Image Grid.RowSpan="2" Source="{Binding ImageName}" WidthRequest="60" HeightRequest="60" Margin="0, 0, 5, 0"></Image>
+                        <Image Grid.RowSpan="7" Source="{Binding ImageName}" WidthRequest="60" HeightRequest="60" Margin="0, 0, 5, 0"></Image>
                         <Label Grid.Column="1" Text="{Binding TripName}" FontAttributes="Bold" TextColor="DarkCyan"/>
-                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Destination}" VerticalOptions="End"/>
-                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding TripDate}" VerticalOptions="End"/>
-                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding RiskAssessment}" VerticalOptions="End"/>
-                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Description}" VerticalOptions="End"/>
-                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding PeopleAttending}" VerticalOptions="End"/>
-                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Transportation}" VerticalOptions="End"/>
+                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Destination}" VerticalOptions="End"/>
+                        <Label Grid.Row="3" Grid.Column="1" Text="{Binding TripDate}" VerticalOptions="End"/>
+                        <Label Grid.Row="4" Grid.Column="1" Text="{Binding RiskAssessment}" VerticalOptions="End"/>
+                        <Label Grid.Row="5" Grid.Column="1" Text="{Binding TripDesc}" VerticalOptions="End"/>
+                        <Label Grid.Row="6" Grid.Column="1" Text="{Binding PeopleAttending}" VerticalOptions="End"/>
+                        <Label Grid.Row="7" Grid.Column="1" Text="{Binding Transportation}" VerticalOptions="End"/>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
