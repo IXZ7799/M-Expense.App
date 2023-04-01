@@ -7,7 +7,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <SearchBar Grid.Row="0" x:Name="searchTrip" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="5" SearchButtonPressed="searchTrip_SearchButtonPressed"></SearchBar>
+        <SearchBar Grid.Row="0" x:Name="searchTrip" Placeholder="Search for a trip" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="5" SearchButtonPressed="searchTrip_SearchButtonPressed"></SearchBar>
         <CollectionView x:Name="collectionView" SelectionMode="Single" SelectionChanged="collectionView_SelectionChanged" Grid.Row="1">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
