@@ -10,6 +10,11 @@ public partial class MainPage : ContentPage
     {
         collectionView.ItemsSource = App.UserDatabase.GetUserList();
     }
+    private void RefreshPage()
+    {
+        populateUserData();
+    }
+
     protected override void OnAppearing()
     {
         base.OnAppearing();
@@ -46,6 +51,11 @@ public partial class MainPage : ContentPage
     {
         App.UserDatabase.DeleteAllUsers();
         populateUserData();
+    }
+
+    private void btnRefresh_Clicked(object sender, EventArgs e)
+    {
+        RefreshPage();
     }
 }
 

@@ -51,6 +51,7 @@
 	  <None Remove="Resources\Images\button_add.svg" />
 	  <None Remove="Resources\Images\button_back.svg" />
 	  <None Remove="Resources\Images\button_delete.svg" />
+	  <None Remove="Resources\Images\button_refresh.svg" />
 	  <None Remove="Resources\Images\default_image.svg" />
 	  <None Remove="Resources\Images\earth_africa.svg" />
 	  <None Remove="Resources\Images\earth_americas.svg" />
