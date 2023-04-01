@@ -102,7 +102,7 @@ namespace M_Expense
         {
             try
             {
-                return databaseConnection.Query<User>("SELECT * FROM " + USER_TABLE + " WHERE " + TRIPNAME_COLUMN + " LIKE '%' || ? || '%' OR " + DESTINATION_COLUMN + " LIKE '%' || ? || '%' OR " + TRIPDATE_COLUMN + " LIKE '%' || ? || '%';", new string[] { name, name, name });
+                return databaseConnection.Query<User>("SELECT * FROM " + USER_TABLE + " WHERE " + TRIPNAME_COLUMN + " LIKE '%' || ? || '%' OR " + DESTINATION_COLUMN + " LIKE '%' || ? || '%';", new string[] { name, name });
             }
             catch (Exception ex)
             {
