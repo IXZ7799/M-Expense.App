@@ -25,16 +25,16 @@
             <Entry x:Name="txtTripName" Placeholder="Trip Name" Grid.Row="1" Grid.Column="1" Text="{Binding TripName}" FontAttributes="Bold" TextColor="MediumVioletRed"/>
             <Entry x:Name="txtDestination" Placeholder="Destination" Grid.Row="2" Grid.Column="1" Text="{Binding Destination}" VerticalOptions="End"/>
             <Entry x:Name="txtTripDate" Placeholder="Trip Date" Grid.Row="3" Grid.Column="1" Text="{Binding TripDate}" VerticalOptions="End"/>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
                 <Label Text="Risk Assessment:" VerticalOptions="Center"/>
-                <RadioButton x:Name="rbYes" VerticalOptions="Center" IsChecked="{Binding RiskAssessment, Converter={StaticResource BoolToStringConverter}, ConverterParameter='Yes'}"/>
+                <RadioButton x:Name="rbYes" IsChecked="{Binding RiskAssessment, Converter={StaticResource BoolToStringConverter}, ConverterParameter='Yes'}"/>
                 <Label Text="Yes" VerticalOptions="Center"/>
-                <RadioButton x:Name="rbNo" VerticalOptions="Center" IsChecked="{Binding RiskAssessment, Converter={StaticResource BoolToStringConverter}, ConverterParameter='No'}"/>
+                <RadioButton x:Name="rbNo" IsChecked="{Binding RiskAssessment, Converter={StaticResource BoolToStringConverter}, ConverterParameter='No'}"/>
                 <Label Text="No" VerticalOptions="Center"/>
             </StackLayout>
-            <Entry x:Name="txtTripDesc" Grid.Row="5" Grid.Column="1" Text="{Binding TripDesc}"  VerticalOptions="End"/>
-            <Entry x:Name="txtPeopleAttending" Grid.Row="6" Grid.Column="1" Text="{Binding PeopleAttending}" VerticalOptions="End"/>
-            <Entry x:Name="txtTransportation" Grid.Row="7" Grid.Column="1" Text="{Binding Transportation}"  VerticalOptions="End"/>
+            <Entry x:Name="txtTripDesc" Placeholder="Description" Grid.Row="5" Grid.Column="1" Text="{Binding TripDesc}"  VerticalOptions="End"/>
+            <Entry x:Name="txtPeopleAttending" Placeholder="Num. People Attending" Grid.Row="6" Grid.Column="1" Text="{Binding PeopleAttending}" VerticalOptions="End"/>
+            <Entry x:Name="txtTransportation" Placeholder="Transportation Mode" Grid.Row="7" Grid.Column="1" Text="{Binding Transportation}"  VerticalOptions="End"/>
         </Grid>
         <Picker x:Name="pckImage" Title="Choose Image" TextColor="DarkKhaki" Margin="20, 0, 20, 0" WidthRequest="150" HorizontalOptions="Start" SelectedIndexChanged="PckImage_SelectedIndexChanged"/>
         <Button Text="Save" Margin="10" x:Name="btnSave" Clicked="btnSave_Clicked"></Button>

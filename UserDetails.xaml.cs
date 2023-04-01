@@ -32,13 +32,31 @@ public partial class UserDetails : ContentPage
         string tripName = this.txtTripName.Text;
         string destination = this.txtDestination.Text;
         string tripDate = this.txtTripDate.Text;
-        string riskAssessment = this.txtRiskAssessment.Text;
+        string riskAssessment = (this.rbYes.IsChecked ? "Yes" : "No");
         string tripDesc = this.txtTripDesc.Text;
         int peopleAttending = int.Parse(this.txtPeopleAttending.Text);
         string transportation = this.txtTransportation.Text;
 
         if (this.pckImage.SelectedItem != null)
             selectedImage = this.pckImage.SelectedItem as string;
+
+        if (string.IsNullOrEmpty(tripName))
+        {
+            DisplayAlert("ERROR", "Please enter your trip's name.", "OK");
+            return;
+        }
+
+        if (string.IsNullOrEmpty(destination))
+        {
+            DisplayAlert("ERROR", "Please enter your trip's destination.", "OK");
+            return;
+        }
+
+        if (string.IsNullOrEmpty(tripDate))
+        {
+            DisplayAlert("ERROR", "Please enter your trip's date.", "OK");
+            return;
+        }
 
         if (isUpdated)
         {
