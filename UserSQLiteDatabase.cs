@@ -1,5 +1,4 @@
-﻿using Android.Database.Sqlite;
-using Microsoft.Maui.Storage;
+﻿using Microsoft.Maui.Storage;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -55,7 +54,7 @@ namespace M_Expense
                 databaseConnection.CreateTable<User>();
                 CurrentState = "Database created";
             }
-            catch (SQLiteException ex)
+            catch (SQLite.SQLiteException ex)
             {
                 CurrentState = ex.Message;
             }
@@ -68,7 +67,7 @@ namespace M_Expense
                 databaseConnection.DropTable<User>();
                 databaseConnection.CreateTable<User>();
             }
-            catch (SQLiteException ex)
+            catch (SQLite.SQLiteException ex)
             {
                 CurrentState = ex.Message;
             }

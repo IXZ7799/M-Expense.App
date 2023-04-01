@@ -6,10 +6,19 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
     }
+    private void populateUserData()
+    {
+        collectionView.ItemsSource = App.UserDatabase.GetUserList();
+    }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        populateUserData();
+    }
 
     private void searchTrip_SearchButtonPressed(object sender, EventArgs e)
     {
-        string keyword = this.searchUser.Text;
+        string keyword = this.searchTrip.Text;
 
         if (keyword == null || keyword.Length == 0)
         {
@@ -29,7 +38,7 @@ public partial class MainPage : ContentPage
 
     private void btnAdd_Clicked(object sender, EventArgs e)
     {
-        User newCust = new User("", "", 0, UserCollection.DEFAULT_IMAGE);
+        User newCust = new User("", "", "", "", "", 0, "", 0, UserCollection.DEFAULT_IMAGE);
         Navigation.PushModalAsync(new UserDetails(newCust, false), true);
     }
 

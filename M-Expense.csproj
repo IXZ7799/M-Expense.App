@@ -48,6 +48,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Remove="UserDetails.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Images\button_add.svg" />
 	  <None Remove="Resources\Images\button_delete.svg" />
 	  <None Remove="Resources\Images\default_image.svg" />
@@ -56,6 +60,12 @@
 	  <None Remove="Resources\Images\earth_asia.svg" />
 	  <None Remove="Resources\Images\earth_europe.svg" />
 	  <None Remove="Resources\Images\earth_oceania.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="UserDetails.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </EmbeddedResource>
 	</ItemGroup>
 
 	<ItemGroup>

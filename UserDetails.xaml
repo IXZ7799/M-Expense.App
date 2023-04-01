@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="M_Expense.UserDetails"
+             Title="UserDetails">
+
+    <VerticalStackLayout>
+        <Label x:Name="lblTitle" Text="{Binding ID, StringFormat='User Details ({0:D})'}" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="Large" Margin="0,0,0,30" TextColor="DarkSlateGrey"/>
+        <Grid Padding="10" x:Name="gridUser">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="imgPic" Grid.Row="0" Grid.RowSpan="2" Source="{Binding ImageName}" WidthRequest="60" HeightRequest="60" Margin="0,0,5,0"></Image>
+            <Entry x:Name="txtTripName" Grid.Row="0" Grid.Column="1" Text="{Binding TripName}" FontAttributes="Bold" TextColor="MediumVioletRed"/>
+            <Entry x:Name="txtDestination" Grid.Row="1" Grid.Column="1" Text="{Binding Destination}" FontAttributes="Italic" VerticalOptions="End"/>
+            <Entry x:Name="txtTripDate" Grid.Row="1" Grid.Column="1" Text="{Binding TripDate}" FontAttributes="Italic" VerticalOptions="End"/>
+            <Entry x:Name="txtRiskAssessment" Grid.Row="1" Grid.Column="1" Text="{Binding RiskAssessment}" FontAttributes="Italic" VerticalOptions="End"/>
+            <Entry x:Name="txtTripDesc" Grid.Row="1" Grid.Column="1" Text="{Binding TripDesc}" FontAttributes="Italic" VerticalOptions="End"/>
+            <Entry x:Name="txtPeopleAttending" Grid.Row="1" Grid.Column="1" Text="{Binding PeopleAttending}" FontAttributes="Italic" VerticalOptions="End"/>
+            <Entry x:Name="txtTransportation" Grid.Row="1" Grid.Column="1" Text="{Binding Transportation}" FontAttributes="Italic" VerticalOptions="End"/>
+        </Grid>
+        <Picker x:Name="pckImage" Title="Choose Image" TextColor="DarkKhaki" Margin="20, 0, 20, 0" WidthRequest="150" HorizontalOptions="Start" SelectedIndexChanged="pckImage_SelectedIndexChanged"/>
+        <Button Text="Save" Margin="10" x:Name="btnSave" Clicked="btnSave_Clicked"></Button>
+        <Button Text="Delete" Margin="10" x:Name="btnDelete" Clicked="btnDelete_Clicked"></Button>
+        <VerticalStackLayout Grid.Row="1" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,10,10">
+            <ImageButton x:Name="btnBack" Source="button_back.svg" Aspect="AspectFit" WidthRequest="50" HeightRequest="50" Margin="0,0,10,10" Clicked="btnBack_Clicked"/>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
