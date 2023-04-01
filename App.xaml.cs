@@ -3,7 +3,7 @@
 public partial class App : Application
 {
     public User selectedUser;
-    private static UserSQLiteDatabase UserDB;
+    private static UserSQLiteDatabase userDB;
     public App()
     {
         InitializeComponent();
