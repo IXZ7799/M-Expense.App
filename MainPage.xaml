@@ -34,7 +34,7 @@
         </CollectionView>
         <VerticalStackLayout Grid.Row="1" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,10,10">
             <ImageButton x:Name="btnAdd" Source="button_add.svg" Aspect="AspectFit" WidthRequest="50" HeightRequest="50" Margin="0,0,10,10" Clicked="btnAdd_Clicked"/>
-            <ImageButton x:Name="btnDeleteAll" Source="button_remove.svg" Aspect="AspectFit" WidthRequest="50" HeightRequest="50" Margin="0,0,10,10" Clicked="btnDeleteAll_Clicked"/>
+            <ImageButton x:Name="btnDeleteAll" Source="button_delete.svg" Aspect="AspectFit" WidthRequest="50" HeightRequest="50" Margin="0,0,10,10" Clicked="btnDeleteAll_Clicked"/>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

@@ -21,7 +21,7 @@ public partial class UserDetails : ContentPage
             this.pckImage.SelectedItem = cust.ImageName;
     }
 
-    private void pckImage_SelectedIndexChanged(object sender, EventArgs e)
+    private void PckImage_SelectedIndexChanged(object sender, EventArgs e)
     {
         this.imgPic.Source = this.pckImage.SelectedItem as string;
     }

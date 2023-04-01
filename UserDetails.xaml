@@ -24,7 +24,7 @@
             <Entry x:Name="txtPeopleAttending" Grid.Row="1" Grid.Column="1" Text="{Binding PeopleAttending}" FontAttributes="Italic" VerticalOptions="End"/>
             <Entry x:Name="txtTransportation" Grid.Row="1" Grid.Column="1" Text="{Binding Transportation}" FontAttributes="Italic" VerticalOptions="End"/>
         </Grid>
-        <Picker x:Name="pckImage" Title="Choose Image" TextColor="DarkKhaki" Margin="20, 0, 20, 0" WidthRequest="150" HorizontalOptions="Start" SelectedIndexChanged="pckImage_SelectedIndexChanged"/>
+        <Picker x:Name="pckImage" Title="Choose Image" TextColor="DarkKhaki" Margin="20, 0, 20, 0" WidthRequest="150" HorizontalOptions="Start" SelectedIndexChanged="PckImage_SelectedIndexChanged"/>
         <Button Text="Save" Margin="10" x:Name="btnSave" Clicked="btnSave_Clicked"></Button>
         <Button Text="Delete" Margin="10" x:Name="btnDelete" Clicked="btnDelete_Clicked"></Button>
         <VerticalStackLayout Grid.Row="1" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,10,10">
