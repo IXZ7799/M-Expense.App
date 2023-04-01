@@ -10,19 +10,25 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Image x:Name="imgPic" Grid.Row="0" Grid.RowSpan="2" Source="{Binding ImageName}" WidthRequest="60" HeightRequest="60" Margin="0,0,5,0"></Image>
-            <Entry x:Name="txtTripName" Grid.Row="0" Grid.Column="1" Text="{Binding TripName}" FontAttributes="Bold" TextColor="MediumVioletRed"/>
-            <Entry x:Name="txtDestination" Grid.Row="1" Grid.Column="1" Text="{Binding Destination}" FontAttributes="Italic" VerticalOptions="End"/>
-            <Entry x:Name="txtTripDate" Grid.Row="1" Grid.Column="1" Text="{Binding TripDate}" FontAttributes="Italic" VerticalOptions="End"/>
-            <Entry x:Name="txtRiskAssessment" Grid.Row="1" Grid.Column="1" Text="{Binding RiskAssessment}" FontAttributes="Italic" VerticalOptions="End"/>
-            <Entry x:Name="txtTripDesc" Grid.Row="1" Grid.Column="1" Text="{Binding TripDesc}" FontAttributes="Italic" VerticalOptions="End"/>
-            <Entry x:Name="txtPeopleAttending" Grid.Row="1" Grid.Column="1" Text="{Binding PeopleAttending}" FontAttributes="Italic" VerticalOptions="End"/>
-            <Entry x:Name="txtTransportation" Grid.Row="1" Grid.Column="1" Text="{Binding Transportation}" FontAttributes="Italic" VerticalOptions="End"/>
+            <Entry x:Name="txtTripName" Grid.Row="1" Grid.Column="1" Text="{Binding TripName}" FontAttributes="Bold" TextColor="MediumVioletRed"/>
+            <Entry x:Name="txtDestination" Grid.Row="2" Grid.Column="1" Text="{Binding Destination}" FontAttributes="Italic" VerticalOptions="End"/>
+            <Entry x:Name="txtTripDate" Grid.Row="3" Grid.Column="1" Text="{Binding TripDate}" FontAttributes="Italic" VerticalOptions="End"/>
+            <Entry x:Name="txtRiskAssessment" Grid.Row="4" Grid.Column="1" Text="{Binding RiskAssessment}" FontAttributes="Italic" VerticalOptions="End"/>
+            <Entry x:Name="txtTripDesc" Grid.Row="5" Grid.Column="1" Text="{Binding TripDesc}" FontAttributes="Italic" VerticalOptions="End"/>
+            <Entry x:Name="txtPeopleAttending" Grid.Row="6" Grid.Column="1" Text="{Binding PeopleAttending}" FontAttributes="Italic" VerticalOptions="End"/>
+            <Entry x:Name="txtTransportation" Grid.Row="7" Grid.Column="1" Text="{Binding Transportation}" FontAttributes="Italic" VerticalOptions="End"/>
         </Grid>
         <Picker x:Name="pckImage" Title="Choose Image" TextColor="DarkKhaki" Margin="20, 0, 20, 0" WidthRequest="150" HorizontalOptions="Start" SelectedIndexChanged="PckImage_SelectedIndexChanged"/>
         <Button Text="Save" Margin="10" x:Name="btnSave" Clicked="btnSave_Clicked"></Button>
