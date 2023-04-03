@@ -58,4 +58,3 @@ public partial class MainPage : ContentPage
         RefreshPage();
     }
 }
-
