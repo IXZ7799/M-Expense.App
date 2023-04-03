@@ -4,7 +4,7 @@ namespace M_Expense;
 
 public partial class UserDetails : ContentPage
 {
-    private bool isUpdated;
+    private readonly bool isUpdated;
     public UserDetails(User cust, bool isUpdated)
     {
         InitializeComponent();
@@ -75,7 +75,7 @@ public partial class UserDetails : ContentPage
         }
         else
         {
-            User newCust = new User(tripName, destination, tripDate, riskAssessment, tripDesc, peopleAttending, transportation, 0, selectedImage);
+            User newCust = new(tripName, destination, tripDate, riskAssessment, tripDesc, peopleAttending, transportation, 0, selectedImage);
             App.UserDatabase.SaveUser(newCust);
             Navigation.PopModalAsync();
         }
